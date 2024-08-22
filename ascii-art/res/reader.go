@@ -7,7 +7,6 @@ import (
 )
 
 func Reader(banner string) string {
-	fmt.Println(banner)
 	// if reading the bannner fails or the file got altered in a way that its gonna ruin the ascii-art it will be  fetched and  that will secure normal running of the program
 	content, err := os.ReadFile(banner + ".txt")
 	if err != nil || len(content) != 6623 {
